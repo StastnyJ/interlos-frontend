@@ -99,7 +99,7 @@ function App() {
         <br />
         <br />
         <div style={{ display: "flex" }}>
-          <Button color="primary" disabled={isLoading} variant="contained" onClick={evaluateCode}>
+          <Button color="primary" disabled={isLoading || actCode.length === 0} variant="contained" onClick={evaluateCode}>
             {isLoading ? "Vyhodnocuji" : "Odeslat příkaz"}
           </Button>
           <div style={{ flexGrow: 1 }}></div>
